@@ -59,7 +59,7 @@ if wget -q -nc --show-progress --progress=bar:force:noscroll -O "&plugin;/packag
     exit 1
   fi
   echo
-  echo "-------------------Sucessfully downloaded Firewire Drivers--------------------"
+  echo "------------------Successfully downloaded Firewire Drivers--------------------"
 else
   echo
   echo "-----------------------Can't download Firewire Drivers------------------------"
@@ -97,7 +97,7 @@ check
 install > /dev/null
 
 echo
-echo "---------------------Installation of Firewire Drivers successfull---------------------"
+echo "-----------------Installation of Firewire Drivers successful------------------"
 echo
 
 </INLINE>
