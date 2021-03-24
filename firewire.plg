@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
   <!ENTITY name      "firewire">
   <!ENTITY author    "ich777">
-  <!ENTITY version   "2021.03.08">
+  <!ENTITY version   "2021.03.24">
   <!ENTITY gitURL    "https://github.com/&author;/unraid-&name;/raw/master">
   <!ENTITY pluginURL "&gitURL;/&name;.plg">
   <!ENTITY plugin    "/boot/config/plugins/&name;">
@@ -13,6 +13,9 @@
 
 <CHANGES>
 
+###2021.03.24
+- Integrated icon into package
+
 ###2021.03.08
 - Initial release
 
@@ -22,10 +25,6 @@
 <INLINE>
 rm -f $(ls /boot/config/plugins/&name;/&name;*.txz 2>/dev/null|grep -v '&version;')
 </INLINE>
-</FILE>
-
-<FILE Name="&emhttp;/images/firewire.png">
-<URL>https://git.minenet.at/ich777/docker-templates/raw/branch/master/ich777/images/firewire.png</URL>
 </FILE>
 
 <FILE Name="&emhttp;/README.md">
@@ -95,6 +94,12 @@ depmod -a
 #Check if Firewire Drivers are allready downloaded
 check
 install > /dev/null
+
+#Check if icon is already installed
+if [ ! -f &emhttp;/images/firewire.png ]; then
+  mkdir -p &emhttp;/images
+  wget -O &emhttp;/images/firewire.png https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/firewire.png
+fi
 
 echo
 echo "-----------------Installation of Firewire Drivers successful------------------"
