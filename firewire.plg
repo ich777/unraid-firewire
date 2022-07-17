@@ -2,16 +2,19 @@
 <!DOCTYPE PLUGIN [
   <!ENTITY name      "firewire">
   <!ENTITY author    "ich777">
-  <!ENTITY version   "2021.06.23">
+  <!ENTITY version   "2022.07.17">
   <!ENTITY gitURL    "https://github.com/&author;/unraid-&name;/raw/master">
   <!ENTITY pluginURL "&gitURL;/&name;.plg">
   <!ENTITY plugin    "/boot/config/plugins/&name;">
   <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
-<PLUGIN  name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" min="6.9.0">
+<PLUGIN  name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" min="6.9.0" max="6.10.3">
 
 <CHANGES>
+
+###2022.07.17
+- Changed plugin to be only compatible up to 6.10.3, modules are integrated into Unraid itself on further versions
 
 ###2021.06.23
 - Changed package download repo
